@@ -7,6 +7,7 @@ public class Ejemplo1{
         try {
             // Abrimos el "ejemplo.txt" para leerlo
             BufferedReader br = new BufferedReader(new FileReader("ejemplo.txt"));
+            
             String linea; // Aqui guardamos lo que leamos
             while ((linea= br.readLine())!=null) {// Esto lee hasta que readLine() devuelva un null (NADA)
                 System.out.println(linea);
