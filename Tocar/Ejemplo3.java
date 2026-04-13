@@ -10,7 +10,7 @@ public class Ejemplo3{
             bw.write(1);//ESCRIBE
             bw.newLine();
             bw.write(1);
-            bw.close();
+            bw.close();//CIERRA
         } catch (IOException e) {
             System.out.println("Error al escribir el archivo: " + e.getMessage());
         }
