@@ -15,7 +15,7 @@ public class App {
 
         System.out.print("Edad: ");
         int edad = sc.nextInt();
-        sc.nextLine(); // limpiar buffer
+        sc.nextLine();
 
         System.out.print("Posición: ");
         String posicion = sc.nextLine();
