@@ -36,21 +36,21 @@ public class App {
         try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("Jugador.txt"))) {
             oos.writeObject(j);
             System.out.println("JUGADOR GUARDADO CORRECTAMENTE");
+            ois.close();
         } catch (Exception e) {
             throw new Exception("ERROR AL GUARDAR EL JUGADOR");
         }
-
         // 4. Leer objeto desde el fichero
         try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream("Jugador.txt"))) {
 
             Jugador jugadorLeido = (Jugador) ois.readObject();
             System.out.println("JUGADOR LEÍDO DESDE ARCHIVO:");
             System.out.println(jugadorLeido);
+        ois.close();
 
         } catch (Exception e) {
             throw new Exception("ERROR AL LEER EL JUGADOR");
         }
-
         sc.close();
     }
 }
