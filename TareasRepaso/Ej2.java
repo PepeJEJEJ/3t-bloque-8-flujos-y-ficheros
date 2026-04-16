@@ -19,7 +19,7 @@ public class Ej2 {
             int stock = Integer.parseInt(sc.nextLine());
 
             try {
-                BufferedWriter bw = new BufferedWriter(new FileWriter("inventario.csv", true));
+                BufferedWriter bw = new BufferedWriter(new FileWriter("inventario.txt", true));
                 bw.write(nombre + "," + precio + "," + stock);
                 bw.newLine();
                 bw.close();
