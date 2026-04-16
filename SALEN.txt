@@ -1,5 +1,6 @@
-SALEN
-menú, cosas que se piden en el 1
+SALEN:
+menú
+cosas que se piden en el 1
 IMPORTS:TODOS AUTOMATICOS
 SCANNER SC=NEW SCANNER
 LINEA DE CREACION (BUFFERED WRITER Y BUFFERED READER)
