@@ -9,15 +9,15 @@ public class Ejercicio3 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int opcion;
-
-        while (true) {
-            System.out.println("OPCIONES: 1 PON TAREA, 2 MOSTRAR, 3 SALIR");
+        boolean continuar=true;
+        while (continuar==true) {
+            System.out.println("OPCIONES: 1 PON TAREA, 2 MOSTRAR, 3 seguir, 4 Salir");
             opcion = Integer.parseInt(sc.nextLine());
 
             switch (opcion) {
 
                 case 1:
-                    System.out.println("Introduce nueva tarea:");
+                    System.out.println("Pon una nueva tarea:");
                     String nueva = sc.nextLine();
 
                     try {
@@ -45,9 +45,11 @@ public class Ejercicio3 {
 
                 case 3:
                     return;
-
+                case 4:
+                    continuar=false;
+                    break;
                 default:
-                    System.out.println("Opción no válida");
+                    System.out.println("No válida");
             }
         }
     }
