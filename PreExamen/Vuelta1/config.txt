@@ -1,0 +1,3 @@
+idioma:es
+modo_oscuro:true
+volumen:80

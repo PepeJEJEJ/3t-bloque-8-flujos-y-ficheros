@@ -1,0 +1,44 @@
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.util.Scanner;
+
+public class Repaso1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        boolean sigue = true;
+        while (sigue == true) {
+            int opcion = sc.nextInt();
+            switch (opcion) {
+                case 1:
+                    try {
+                        BufferedReader br = new BufferedReader(new FileReader("Texto.txt"));
+                        String linea;
+                        while ((linea = br.readLine()) != null) {
+                            System.out.println(linea);
+                        }
+                    } catch (Exception e) {
+                        System.out.println("ERROR");
+                    }
+
+                    break;
+                case 2:
+                    try {
+                        BufferedWriter bw = new BufferedWriter(new FileWriter("Texto.txt"));
+                        bw.write("AAA");
+                        bw.newLine();
+                        bw.close();
+                    } catch (Exception e) {
+                        System.out.println("ERROR");
+                    }
+                    break;
+                case 3:
+                    sigue = false;
+                default:
+                    break;
+            }
+        }
+
+    }
+}
