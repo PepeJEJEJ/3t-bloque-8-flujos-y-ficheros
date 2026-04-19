@@ -4,10 +4,9 @@ import java.io.IOException;
 
 public class Ej3 {
     public static void main(String[] args) {
-        String idioma = "";
-        String modo = "";
-        String volumen = "";
-
+        String idioma="";
+        String modo="";
+        String volumen="";
         try {
             BufferedReader br = new BufferedReader(new FileReader("config.txt"));
             String linea;
@@ -17,17 +16,22 @@ public class Ej3 {
                 String clave = partes[0];
                 String valor = partes[1];
 
-                if (clave.equals("idioma")) idioma = valor;
-                if (clave.equals("modo_oscuro")) modo = valor;
-                if (clave.equals("volumen")) volumen = valor;
+                if (clave.equals("idioma"))
+                    idioma = valor;
+                if (clave.equals("modo_oscuro"))
+                    modo = valor;
+                if (clave.equals("volumen"))
+                    volumen = valor;
             }
 
             br.close();
 
-            String idiomaFinal = idioma.equals("es") ? "Castellano" : idioma;
-
-            System.out.println("El sistema está configurado en idioma " 
-                + idiomaFinal + " con un volumen de " + volumen);
+            String idiomaFinal = "";
+            if (idioma.equals("es")) {
+                idiomaFinal = idioma;
+            }
+            
+            System.out.println("El sistema está configurado en idioma " + idiomaFinal + " con un volumen de " + volumen);
 
         } catch (IOException e) {
             System.out.println("Error");

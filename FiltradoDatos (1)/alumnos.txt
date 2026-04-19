@@ -1,0 +1,10 @@
+Juan:17
+Maria:28
+Antonio:19
+Jose:16
+Elena:18
+Francisco:15
+Martina:15
+Carlos:22
+a:2
+aa:22
